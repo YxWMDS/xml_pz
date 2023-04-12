@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="planes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="plane" type="plane" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="plane">
+        <xs:sequence>
+            <xs:element name="type" type="xs:string" />
+            <xs:element name="seats" type="seatsType" />
+            <xs:element name="ammunition" type="xs:boolean" />
+            <xs:element name="rockets" type="rocketsType" />
+            <xs:element name="radar" type="xs:boolean" />
+            <xs:element name="parameters">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="length" type="xs:positiveInteger" />
+                        <xs:element name="width" type="xs:positiveInteger" />
+                        <xs:element name="height" type="xs:positiveInteger" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" />
+    </xs:complexType>
+
+    <xs:simpleType name="seatsType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rocketsType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

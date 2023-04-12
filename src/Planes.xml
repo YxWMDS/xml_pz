@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<planes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="Planes.xsd">
+
+    <plane id ="1">
+        <type>Support</type>
+        <seats>1</seats>
+        <ammunition>true</ammunition>
+        <rockets>8</rockets>
+        <radar>true</radar>
+        <parameters>
+            <length>15</length>
+            <width>8</width>
+            <height>4</height>
+        </parameters>
+    </plane>
+
+    <plane id ="2">
+        <type>Escort</type>
+        <seats>2</seats>
+        <ammunition>false</ammunition>
+        <rockets>0</rockets>
+        <radar>true</radar>
+        <parameters>
+            <length>12</length>
+            <width>6</width>
+            <height>3</height>
+        </parameters>
+    </plane>
+
+    <plane id ="3">
+        <type>Fighter</type>
+        <seats>1</seats>
+        <ammunition>true</ammunition>
+        <rockets>10</rockets>
+        <radar>true</radar>
+        <parameters>
+            <length>18</length>
+            <width>7</width>
+            <height>3</height>
+        </parameters>
+    </plane>
+
+</planes>
